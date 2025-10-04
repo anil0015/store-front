@@ -71,7 +71,7 @@ export default {
   methods: {
     async fetchProducts() {
       try {
-        const response = await fetch('http://4.174.128.74:3030/products');      
+        const response = await fetch('https://product-service-h8gsc5gyeaa9aqaq.canadacentral-01.azurewebsites.net/products');      
         if (response.ok) {
           this.products = await response.json();
         } else {
@@ -89,7 +89,7 @@ export default {
       }
 
       try {
-        const response = await fetch('http://4.174.128.74:3000/orders', {
+        const response = await fetch('https://order-service0-esd4hdfdfeb5ctbb.canadacentral-01.azurewebsites.net/orders', {
 
           method: 'POST',
           headers: {
